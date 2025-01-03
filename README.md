@@ -1,46 +1,42 @@
-﻿# Como rodar o projeto
+## Descrição do Projeto
+Kognito é uma plataforma educacional inclusiva desenvolvida como Trabalho de Conclusão de Curso (TCC) em parceria com o programa [Estartando Devs](https://www.estartandodevs.com.br/). O projeto busca oferecer um ambiente de aprendizado inclusivo e dinâmico, com funcionalidades de gamificação para engajar alunos neurodivergentes.
 
-## Pré-requisitos
+A aplicação foi desenvolvida em **C# e .NET**, seguindo princípios de **Clean Architecture** e **CQRS**, garantindo organização e escalabilidade. Uma equipe de 10 pessoas colaborou na implementação do sistema.
 
-1. Baixe e instale o [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
-2. Baixe e instale o [Docker](https://www.docker.com/get-started).
+## Documentação da API
 
-## Passos para Configuração
+Acesse a [documentação da API](https://kognitoapi.estartandodevs.com.br/swagger/index.html) para mais informações sobre os endpoints disponíveis.
 
-1. Abra o terminal e navegue até a pasta do projeto WebApi:
+## Funcionalidades
+A plataforma combina elementos de **inclusividade** e **gamificação**, permitindo que professores gerenciem turmas, tarefas e conteúdos, enquanto alunos monitoram seu desempenho e recebem incentivos por conquistas acadêmicas.
+
+## Tecnologias Utilizadas
+- **Backend**: Implementado em **C# e .NET**, com **SQL Server** como banco de dados e suporte a arquitetura limpa e CQRS.  
+- **Frontend**: Desenvolvido em **Angular** com **TypeScript**, proporcionando uma interface moderna e responsiva.  
+  O código do frontend está disponível em [kognito-frontend](https://github.com/estartandodevs-course/kognito-frontend).
+
+## Execução do Projeto
+
+### Backend
+1. Clone o repositório:
    ```bash
-   cd src/WebApi/Kognito.WebApi
+   git clone https://github.com/AfranioCaires/kognito-backend
+   ```
+2. Acesse a pasta do Docker:
+   ```bash
+   cd docker
+   ```
+3. Execute o Docker Compose:
+   ```bash
+   docker-compose up
    ```
 
-2. Suba os containers do Docker:
-   ```bash
-   docker-compose up -d
-   ```
+### Frontend
+O frontend pode ser acessado no repositório [kognito-frontend](https://github.com/estartandodevs-course/kognito-frontend).
 
-3. Execute todas as migrações do banco de dados:
+## Sobre o TCC
+Este projeto foi desenvolvido como TCC por uma equipe de 10 participantes do programa [Estartando Devs](https://www.estartandodevs.com.br/), promovendo a inclusão educacional e boas práticas de desenvolvimento.
 
-    - **Migrações de Usuários**
-       ```bash
-       dotnet ef database update --context UsuarioContext
-       ```
-    - **Migrações de Turmas**
-       ```bash
-       dotnet ef database update --context TurmaContext
-       ```
-    - **Migrações de Tarefas**
-       ```bash
-       dotnet ef database update --context TarefasContext
-       ```
-    - **Migrações de Autenticação**
-       ```bash
-       dotnet ef database update --context AutenticacaoDbContext
-       ```
-
-4. Execute o projeto:
-   ```bash
-   dotnet run
-   ```
-
-## Acesso à API
-
-- **Swagger**: [http://localhost:5225/swagger](http://localhost:5225/swagger)
+## Acesso ao Projeto
+- **Frontend**: [kognito-frontend](https://github.com/estartandodevs-course/kognito-frontend)  
+- **Backend**: [kognito-backend](https://github.com/AfranioCaires/kognito-backend)  
