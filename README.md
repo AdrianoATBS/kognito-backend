@@ -20,7 +20,7 @@ A plataforma combina elementos de **inclusividade** e **gamificação**, permiti
 ### Backend
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/AfranioCaires/kognito-backend
+   (https://github.com/AdrianoATBS/kognito-backend.git)
    ```
 2. Acesse a pasta do Docker:
    ```bash
